@@ -3,7 +3,7 @@
 #include <ESP8266WiFi.h>
 #include <DHT.h>
 
-#define ONE_WIRE_BUS	D3	
+#define ONE_WIRE_BUS		D3	
 #define DHT_PIN			D4
 #define DHT_TYPE		DHT11
 
@@ -12,17 +12,17 @@ DallasTemperature dallas(&oneWire);
 DHT dht(DHT_PIN, DHT_TYPE);
 
 //--WiFi [Station Mode]
-const char *ssid = "KANDANG_PURWO1_[WWW.AYAMKU.COM]";
-const char *password = "purwojaya";
+const char *ssid = "******";		// change with your Access Point SSID
+const char *password = "******";	// change with your Access Point Password
 WiFiClient client;
 const int httpPort   = 80;
 //--
 
 //--PubNub
 const char* pnubHost    = "pubsub.pubnub.com";
-const char* pnubPubKey  = "pub-c-0e2f0fec-d091-4191-b4f2-dbd59cbcf9cf";
-const char* pnubSubKey  = "sub-c-12bba8ea-0e08-11e6-a6dc-02ee2ddab7fe";
-const char* pnubChannel = "ayamku_iot";
+const char* pnubPubKey  = "*******";		// change with your PubKey
+const char* pnubSubKey  = "*******";		// change with your SubKey
+const char* pnubChannel = "iot_pubnub";
 //--
 
 unsigned long prevMillis = 0;
